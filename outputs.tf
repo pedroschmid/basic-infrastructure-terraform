@@ -16,13 +16,13 @@ output "s3_bucket_tags" {
 }
 
 # S3 object
-# output "s3_object_key" {
-#   value = "${module.s3_bucket.object_key}"
-# }
+output "s3_object_key" {
+  value = "${module.s3_bucket.object_key}"
+}
 
-# output "s3_object_source" {
-#   value = "${module.s3_bucket.object_source}"
-# }
+output "s3_object_source" {
+  value = "${module.s3_bucket.object_source}"
+}
 
 # EC2 instance
 output "ec2_ami" {

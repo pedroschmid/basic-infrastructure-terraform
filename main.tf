@@ -2,8 +2,28 @@ provider "aws" {
   region = "${var.region}"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "remote-state-bucket-dev"
+    key    = "remote/state/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 resource "random_id" "bucket" {
   byte_length = 8
+}
+
+module "s3_remote_state" {
+  source = "./modules/s3"
+
+  name       = "remote-state-bucket-dev"
+  versioning = true
+
+  tags = {
+    "Name"       = "Terraform remote state"
+    "Enviroment" = "Dev"
+  }
 }
 
 module "s3_bucket" {

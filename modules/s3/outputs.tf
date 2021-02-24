@@ -16,10 +16,10 @@ output "tags" {
 }
 
 # S3 object
-# output "object_key" {
-#   value = "${aws_s3_bucket_object.this.*.key}"
-# }
+output "object_key" {
+  value = "${aws_s3_bucket_object.this.*.key}"
+}
 
-# output "object_source" {
-#   value = "${aws_s3_bucket_object.this.*.object_source}"
-# }
+output "object_source" {
+  value = "${aws_s3_bucket_object.this.*.object_source}"
+}
