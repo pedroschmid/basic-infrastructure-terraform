@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${var.region}"
+  region = "${lookup(var.region, var.env)}"
 }
 
 terraform {
@@ -21,8 +21,8 @@ module "s3_remote_state" {
   versioning = true
 
   tags = {
-    "Name"       = "Terraform remote state"
-    "Enviroment" = "Dev"
+    "Name" = "Terraform remote state"
+    "Env"  = "Development"
   }
 }
 
@@ -33,8 +33,8 @@ module "s3_bucket" {
   versioning = true
 
   tags = {
-    "Name"       = "My s3 bucket"
-    "Enviroment" = "Development"
+    "Name" = "My s3 bucket"
+    "Env"  = "Development"
   }
 
   create_object = true
@@ -48,7 +48,7 @@ module "ec2_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    "Name"       = "My ec2 instance"
-    "Enviroment" = "Development"
+    "Name" = "My ec2 instance"
+    "Env"  = "Development"
   }
 }

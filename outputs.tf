@@ -15,15 +15,6 @@ output "s3_bucket_tags" {
   value = "${module.s3_bucket.tags}"
 }
 
-# S3 object
-output "s3_object_key" {
-  value = "${module.s3_bucket.object_key}"
-}
-
-output "s3_object_source" {
-  value = "${module.s3_bucket.object_source}"
-}
-
 # EC2 instance
 output "ec2_ami" {
   value = "${module.ec2_instance.ami}"

@@ -16,8 +16,8 @@ variable "tags" {
   description = "S3 bucket tags"
 
   default = {
-    "Name"       = "My s3 bucket"
-    "Enviroment" = "Development"
+    "Name" = "My s3 bucket"
+    "Env"  = "Development"
   }
 }
 

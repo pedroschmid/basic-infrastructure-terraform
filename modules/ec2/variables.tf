@@ -14,7 +14,7 @@ variable "tags" {
   description = "EC2 instance tags"
 
   default = {
-    "Name"       = "My ec2 instance"
-    "Enviroment" = "Development"
+    "Name" = "My ec2 instance"
+    "Env"  = "Development"
   }
 }
