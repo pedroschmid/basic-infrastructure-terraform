@@ -1,14 +1,14 @@
 init:
-	terraform11 init
+	terraform init
 plan:
-	terraform11 plan
+	terraform plan
 apply:
-	terraform11 apply
+	terraform apply
 destroy:
-	terraform11 destroy
+	terraform destroy
 get:
-	terraform11 get
+	terraform get
 fmt:
-	terraform11 fmt
+	terraform fmt
 graph:
-	terraform11 graph
+	terraform graph
