@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${lookup(var.region, var.env)}"
+  region = lookup(var.region, var.env)
 }
 
 terraform {

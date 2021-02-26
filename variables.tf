@@ -1,5 +1,5 @@
 variable "region" {
-  type        = "map"
+  type        = map(string)
   description = "Main region"
 
   default = {
